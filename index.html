@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Financial Situation</title>
+    <link rel="stylesheet" href="./phone.css">
+</head>
+<body>
+    <header>
+        <h1>Calcula el porcentaje de tus ingresos y gastos</h1>
+    </header>
+    <main>
+        <section>
+            <div><h2>Ingresos</h2></div>
+            <form action="">
+                <label for="1">Salario:</label>
+                <input id="1" type="number" placeholder="$">
+                <label for="2">Ventas:</label>
+                <input id="2" type="number" placeholder="$">
+                <label for="3">otros 1:</label>
+                <input id="3" type="number" placeholder="$">
+                <label for="4">otros 2:</label>
+                <input id="4" type="number" placeholder="$">
+                <label for="5">otros 3:</label>
+                <input id="5" type="number" placeholder="$">
+                <label for="6">otros 4:</label>
+                <input id="6" type="number" placeholder="$">
+                <label for="7">otros 5:</label>
+                <input id="7" type="number" placeholder="$">
+            </form> 
+            <div>
+                <p id="escribirIngreso1"></p>
+                <p id="escribirIngreso2"></p>
+                <p id="escribirIngreso3"></p>
+                <p id="escribirIngreso4"></p>
+                <p id="escribirIngreso5"></p>
+                <p id="escribirIngreso6"></p>
+                <p id="escribirIngreso7"></p>
+            </div>  
+        </section>
+        <section>
+            <div><h2>Gastos</h2></div>
+            <form action="">
+                <label for="a">Alimentación:</label>
+                <input id="a" type="number" placeholder="$">
+                <label for="b">Vivienda:</label>
+                <input id="b" type="number" placeholder="$">
+                <label for="c">Transporte:</label>
+                <input id="c" type="number" placeholder="$">
+                <label for="d">Salud:</label>
+                <input id="d" type="number" placeholder="$">
+                <label for="e">Entretenimiento:</label>
+                <input id="e" type="number" placeholder="$">
+                <label for="f">Comunicaciones:</label>
+                <input id="f" type="number" placeholder="$">
+                <label for="g">Otros:</label>
+                <input id="g" type="number" placeholder="$">  
+            </form>
+            <div>
+                <p id="escribirGastoA"></p>
+                <p id="escribirGastoB"></p>
+                <p id="escribirGastoC"></p>
+                <p id="escribirGastoD"></p>
+                <p id="escribirGastoE"></p>
+                <p id="escribirGastoF"></p>
+                <p id="escribirGastoG"></p>
+            </div>
+        </section>
+        <div>
+            <button type="button" onclick="push()">Calcular</button>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
