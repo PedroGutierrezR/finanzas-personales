@@ -10,31 +10,25 @@ html {
   color: #d7e5e4;
 }
 body {
-  height: 100vh;
-  background-image: linear-gradient(
-    to right top,
-    #051937,
-    #003250,
-    #004d64,
-    #066874,
-    #35837f
-  );
+  background-color: #051937;
 }
 
 main {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 20vh 1fr 10vh;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
 .title {
   display: grid;
-  grid-column: 2 / 4;
   justify-content: center;
   align-content: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
+
+/* Cards */
 .ingresos,
 .gastos {
   border: 1px solid #051937;
@@ -42,21 +36,18 @@ main {
   padding: 30px;
   background-color: #d7e5e4;
   color: #051937;
-  margin-left: 20px;
+  margin: 10px 20px;
 }
 .ingresos {
   display: grid;
   justify-content: center;
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
 }
 .gastos {
   display: grid;
   justify-content: center;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
 }
 
+/* font-size and details */
 input {
   display: block;
   margin: 5px;
@@ -78,15 +69,15 @@ label {
 p {
   font-size: 1.8rem;
   margin-top: 10px;
+  text-align: center;
 }
 
+/* Button */
 .container-button {
   display: grid;
   justify-content: center;
   align-content: center;
-  margin-left: 20px;
-  grid-column: 1 / 3;
-  grid-row: 3 / 4;
+  margin-bottom: 10px;
 }
 
 .container-button button {
@@ -101,25 +92,24 @@ p {
   cursor: pointer;
 }
 
-.resultado-porcentaje-title {
+/* Results */
+.resultado-porcentaje {
   display: grid;
   align-content: center;
-  justify-content: center;
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
 }
-.resultado {
-  display: grid;
-  justify-content: start;
-  align-content: center;
-  grid-column: 4 / 5;
-  grid-row: 2 / 3;
+.resultado-porcentaje h2 {
+  height: 30px;
 }
+.resultado-porcentaje .resultado {
+  height: 100px;
+}
+/* Created by Pedro Gutiérrez */
 .pedro-gutierrez {
-  grid-column: 4 / 5;
-  grid-row: 3 / 4;
+  display: grid;
+  justify-content: end;
+  margin: 10px;
 }
 .pedro-gutierrez h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 100;
 }

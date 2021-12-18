@@ -14,15 +14,40 @@ function suma(sumarListaIngreso,sumarListaGasto) {
 
 //  Porcentaje
 function porcentaje(ingreso, gasto) {
-    const porcentajeLibre = Math.round((1 - (gasto / ingreso)) * 100);
-    const porcentajeDelGasto = Math.round((gasto / ingreso) * 100);
 
     const escribirSobrante = document.getElementById("escribir-sobrante");
     const escribirGasto = document.getElementById("escribir-gasto");
 
-    escribirSobrante.innerText = "Porcentaje sobrante: " + porcentajeLibre + "%";
-    escribirGasto.innerText = "Porcentaje del gasto: " + porcentajeDelGasto + "%";
+    
+    if (ingreso === 0 && gasto > 0) {
+        escribirSobrante.innerText = "Para una mejor experiencia rellena la tarjeta del ingreso";
+        escribirGasto.innerText = "";
 
+    } else if (ingreso > 0 && gasto === 0) {
+        escribirSobrante.innerText = "Para una mejor experiencia rellena la tarjeta del gasto";
+        escribirGasto.innerText = "";
+
+    } else if (ingreso === 0 && gasto === 0) {
+        escribirSobrante.innerText = "Para una mejor experiencia rellena al menos una casilla de ambas tarjetas";
+        escribirGasto.innerText = "";
+
+    } else {
+        // Calculo del porcentaje
+        const porcentajeLibre = Math.round((1 - (gasto / ingreso)) * 100);
+        const porcentajeDelGasto = Math.round((gasto / ingreso) * 100);
+
+        if (porcentajeLibre === 0) {
+            escribirSobrante.innerText = "Has quedado sin ingresos.";
+            escribirGasto.innerText = "Porcentaje del gasto: " + porcentajeDelGasto + "%";
+        } else if (porcentajeLibre < 0) {
+            escribirSobrante.innerText = "¡Cuidado! El gasto supera al ingreso."; 
+            escribirGasto.innerText = "Porcentaje del gasto: " + porcentajeDelGasto + "%";
+        } else {
+            escribirSobrante.innerText = "Porcentaje sobrante: " + porcentajeLibre + "%";
+            escribirGasto.innerText = "Porcentaje del gasto: " + porcentajeDelGasto + "%";
+    
+        }
+    }
 }
 
 // Push
@@ -49,6 +74,9 @@ function push() {
     const inputIngresoSeven = document.getElementById("7");
     const valueIngresoSeven = Number(inputIngresoSeven.value);
 
+    console.log(listaIngreso.length);
+
+    listaIngreso.length = 0;
     listaIngreso.push(
         valueIngresoOne,
         valueIngresoTwo,
@@ -78,7 +106,9 @@ function push() {
     
     const inputGastoG = document.getElementById("g");
     const valueGastoG = Number(inputGastoG.value);
-    
+    console.log(listaGasto.length);
+   
+    listaGasto.length = 0;
     listaGasto.push(
         valueGastoA,
         valueGastoB,
