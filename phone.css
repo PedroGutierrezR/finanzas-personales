@@ -16,16 +16,14 @@ body {
 main {
   display: grid;
   grid-template-columns: 1fr;
+  justify-items: center;
   gap: 20px;
 }
 
 .title {
-  display: grid;
-  justify-content: center;
-  align-content: center;
   font-size: 1.4rem;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin: 40px 15px 20px;
+  text-align: center;
 }
 
 /* Cards */
@@ -33,18 +31,9 @@ main {
 .gastos {
   border: 1px solid #051937;
   border-radius: 8px;
-  padding: 30px;
+  padding: 30px 50px;
   background-color: #d7e5e4;
   color: #051937;
-  margin: 10px 20px;
-}
-.ingresos {
-  display: grid;
-  justify-content: center;
-}
-.gastos {
-  display: grid;
-  justify-content: center;
 }
 
 /* font-size and details */
@@ -52,10 +41,6 @@ input {
   display: block;
   margin: 5px;
   border-radius: 2px;
-}
-h1 {
-  text-align: center;
-  color: #d7e5e4;
 }
 h2 {
   font-size: 2rem;
@@ -73,13 +58,6 @@ p {
 }
 
 /* Button */
-.container-button {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  margin-bottom: 10px;
-}
-
 .container-button button {
   padding: 10px;
   border-radius: 8px;
@@ -95,19 +73,24 @@ p {
 /* Results */
 .resultado-porcentaje {
   display: grid;
-  align-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 .resultado-porcentaje h2 {
-  height: 30px;
+  display: grid;
+  align-content: center;
+  height: 50px;
 }
-.resultado-porcentaje .resultado {
+.resultado {
   height: 100px;
+  margin: 15px;
 }
+
 /* Created by Pedro Gutiérrez */
 .pedro-gutierrez {
   display: grid;
-  justify-content: end;
-  margin: 10px;
+  justify-self: end;
+  margin: 20px;
 }
 .pedro-gutierrez h3 {
   font-size: 1rem;
