@@ -17,6 +17,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  align-items: center;
   gap: 20px;
 }
 
@@ -72,13 +73,9 @@ p {
 
 /* Results */
 .resultado-porcentaje {
-  display: grid;
-  align-items: center;
   margin-top: 30px;
 }
 .resultado-porcentaje h2 {
-  display: grid;
-  align-content: center;
   height: 50px;
 }
 .resultado {

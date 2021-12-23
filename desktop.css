@@ -1,0 +1,19 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.title {
+  grid-column: 1 / 4;
+}
+
+.resultado-porcentaje {
+  width: 90%;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+.pedro-gutierrez {
+  justify-self: center;
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}

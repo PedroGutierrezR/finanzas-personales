@@ -33,10 +33,16 @@ function porcentaje(ingreso, gasto) {
 
     } else {
         // Calculo del porcentaje
-        const porcentajeLibre = Math.round((1 - (gasto / ingreso)) * 100);
-        const porcentajeDelGasto = Math.round((gasto / ingreso) * 100);
 
-        if (porcentajeLibre === 0) {
+        const calculoIngreso = (1 - (gasto / ingreso)) * 100;
+        const calculoGasto = (gasto / ingreso) * 100;
+        const porcentajeLibre = Math.round(calculoIngreso);
+        const porcentajeDelGasto = Math.round(calculoGasto);
+
+        if (porcentajeLibre === 100 && calculoGasto > 0) {
+            escribirSobrante.innerText = "Porcentaje sobrante: " + calculoIngreso + "%";
+            escribirGasto.innerText = "Porcentaje del gasto: " + calculoGasto + "%";
+        } else if (porcentajeLibre === 0) {
             escribirSobrante.innerText = "Has quedado sin ingresos.";
             escribirGasto.innerText = "Porcentaje del gasto: " + porcentajeDelGasto + "%";
         } else if (porcentajeLibre < 0) {

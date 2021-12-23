@@ -6,24 +6,12 @@ main {
   grid-column: 1 / 3;
 }
 .container-button {
-  margin-top: 10px;
-  display: grid;
+  margin-top: 20px;
   grid-column: 1 / 3;
 }
 .resultado-porcentaje {
   width: 100%;
   grid-column: 1 / 3;
-}
-.resultado-porcentaje h2 {
-  margin: 0;
-}
-.resultado-porcentaje .resultado {
-  display: grid;
-  width: 400px;
-  justify-self: center;
-  align-items: center;
-  grid-column: 2 / 3;
-  margin: 0;
 }
 .pedro-gutierrez {
   grid-column: 1 / 3;
